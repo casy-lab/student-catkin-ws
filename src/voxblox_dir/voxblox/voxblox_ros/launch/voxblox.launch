@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+   <node name="voxblox_node" pkg="voxblox_ros" type="tsdf_server" args="-alsologtostderr" clear_params="true">
+    <remap from="pointcloud" to="/iris/depth_cam/points"/>
+    <remap from="freespace_pointcloud" to="/freespace_pointcloud"/>
+    
+    <param name="use_freespace_pointcloud" value="true" />
+    <param name="publish_slices" value="false" />
+    <param name="publish_pointclouds" value="true" />
+    <param name="publish_traversable" value="false" />
+    <param name="voxel_carving_enabled" value="true" />
+    <param name="use_tf_transforms" value="false" />
+    <param name="use_const_weight" value="false" />
+    <param name="allow_clear" value="true" />
+    <param name="verbose" value="false" />
+    <param name="publish_tsdf_map" value="true" />
+    <param name="publish_esdf_map" value="true" />
+    <param name="publish_tsdf_info" value="true" />
+    <param name="enable_icp" value="false" />
+    <param name="clear_sphere_for_planning" value="false" />
+    
+    <param name="slice_level" value="1.0" />
+    <param name="traversability_radius" value="0.0" />
+    <param name="tsdf_voxel_size" value="0.2" />
+    <param name="tsdf_voxels_per_side" value="16" />
+    <param name="update_mesh_every_n_sec" value="0.25" />
+    <param name="update_esdf_every_n_sec" value="0.25" />
+    <param name="publish_map_every_n_sec" value="0.25" />
+    <param name="min_time_between_msgs_sec" value="0.10" />
+    <param name="pointcloud_queue_size" value="1" />
+    <param name="max_ray_length_m" value="5.0" />
+    <param name="min_ray_length_m" value="0.1" />
+    <param name="esdf_max_distance_m" value="5.0" />
+    <param name="max_integration_time_s" value="0.25" />
+    
+    <param name="color_mode" value="color" />
+    <param name="method" value="fast" />
+    <param name="world_frame" value="map" />
+    
+    <remap from="transform" to="/mavros/local_position/transform" />
+    <rosparam file="$(find voxblox_ros)/cfg/test.yaml"/>
+    
+    <param name="mesh_filename" value="$(find voxblox_ros)/mesh_results/test.ply" />
+
+    <remap from="/voxblox_node/esdf_map_out" to="/esdf_map" />
+    <remap from="/voxblox_node/tsdf_map_out" to="/tsdf_map" />
+  </node>
+  
+  <node name="proxy_node" pkg="voxblox_ros" type="proxy_node" />
+</launch>

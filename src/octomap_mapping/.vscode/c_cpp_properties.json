@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/gent/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/gent/catkin_ws/src/axis_camera/include/**",
+        "/home/gent/catkin_ws/src/bezier_exploration/include/**",
+        "/home/gent/catkin_ws/src/bezier_server/include/**",
+        "/home/gent/catkin_ws/src/lib/bspline_lib/include/**",
+        "/home/gent/catkin_ws/src/vision_opencv/cv_bridge/include/**",
+        "/home/gent/catkin_ws/src/qr_tracker/cv_camera/include/**",
+        "/home/gent/catkin_ws/src/drone_localization/direct_localization/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/eigen_checks/include/**",
+        "/home/gent/catkin_ws/src/drone_localization/fiducial_localization/include/**",
+        "/home/gent/catkin_ws/src/fiducials/fiducial_slam/include/**",
+        "/home/gent/catkin_ws/src/fly_supervisor/include/**",
+        "/home/gent/catkin_ws/src/vision_opencv/image_geometry/include/**",
+        "/home/gent/catkin_ws/src/kinodyn_planning/include/**",
+        "/home/gent/catkin_ws/src/map_server/include/**",
+        "/home/gent/catkin_ws/src/mav_regulator/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/minkindr/minkindr/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/minkindr_ros/minkindr_conversions/include/**",
+        "/home/gent/catkin_ws/src/nbv_exploration/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/numpy_eigen/include/**",
+        "/home/gent/catkin_ws/src/octomap_mapping/octomap_server/include/**",
+        "/home/gent/catkin_ws/src/lib/poly_lib/include/**",
+        "/home/gent/catkin_ws/src/qt_gui/include/**",
+        "/home/gent/catkin_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/gent/catkin_ws/src/drone_localization/robot_localization/include/**",
+        "/home/gent/catkin_ws/src/tesseract_ros/include/**",
+        "/home/gent/catkin_ws/src/toy_pkg/include/**",
+        "/home/gent/catkin_ws/src/trajectory_server/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/voxblox/voxblox/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/voxblox/voxblox_ros/include/**",
+        "/home/gent/catkin_ws/src/voxblox_pkg/voxblox/voxblox_rviz_plugin/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
